@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+</head>
+<body>
+    <h1>This webiste will provide all time weather data</h1>
+    <form action="/alltimeweather" method="post">
+        <div class="box">
+            <label for="city">Choose a City</label>
+            <select name="city" id="city">
+                <option value="Dhaka">Dhaka</option>
+                <option value="Sylhet Division">Sylhet Division</option>
+                <option value="Chittagong">Chittagong</option>
+                <option value="Rajshahi">Rajshahi</option>
+                <option value="Khulna">Khulna</option>  
+            </select>
+        </div>
+        <div class="choosedate">
+            <select name="date" id="date">
+                <option value="5/30/2023">5/30/2023</option>
+                <option value="6/1/2023">6/1/2023</option>
+                <option value="6/2/2023">6/2/2023</option>
+                <option value="6/3/2023">6/3/2023</option>
+                <option value="6/4/2023">6/4/2023</option>  
+            </select>
+        </div>
+        <input type="submit">
+        <div class="information">
+            <div class="cityname"><p>City: <%=weatherReports[0].city %></p></div>
+            <div class="details1"><p>Weather Type: <%=weatherReports[0].description %></p></div>
+            <div class="details2"><p>Temperature: <%= weatherReports[0].temp%> ℃</p></div>
+            <div class="details3"><p>Humidity: <%= weatherReports[0].humidity%> g.m-3</p></div>
+        </div>
+    </form>
+    
+</body>
+</html>
